@@ -1,0 +1,125 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-brand-dark: #0A0E17;
+  --color-brand-surface: #0F172A;
+  --color-brand-card: #1E293B;
+  --color-brand-border: #334155;
+  --color-brand-accent: #38BDF8;
+  --color-brand-accent2: #818CF8;
+  --color-brand-gold: #F59E0B;
+  --color-brand-green: #4ADE80;
+  --color-brand-red: #F87171;
+  --color-brand-muted: #64748B;
+  --color-brand-text: #CBD5E1;
+  --color-brand-heading: #F8FAFC;
+}
+
+@layer base {
+  body {
+    background-color: var(--color-brand-dark);
+    color: var(--color-brand-text);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+  ::selection {
+    background-color: color-mix(in srgb, var(--color-brand-accent) 30%, transparent);
+    color: white;
+  }
+}
+
+@layer components {
+  .container-page {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+  @media (min-width: 640px) {
+    .container-page { padding-left: 1.5rem; padding-right: 1.5rem; }
+  }
+  @media (min-width: 1024px) {
+    .container-page { padding-left: 2rem; padding-right: 2rem; }
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    background-color: var(--color-brand-accent);
+    color: var(--color-brand-dark);
+    font-weight: 600;
+    transition: all 0.2s;
+    box-shadow: 0 0 30px -10px color-mix(in srgb, var(--color-brand-accent) 20%, transparent);
+  }
+  .btn-primary:hover {
+    background-color: color-mix(in srgb, var(--color-brand-accent) 90%, black);
+  }
+  .btn-primary:active {
+    transform: scale(0.98);
+  }
+
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.75rem;
+    border: 2px solid var(--color-brand-border);
+    color: white;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+  .btn-secondary:hover {
+    border-color: color-mix(in srgb, var(--color-brand-accent) 50%, transparent);
+    color: var(--color-brand-accent);
+  }
+  .btn-secondary:active {
+    transform: scale(0.98);
+  }
+
+  .card {
+    background-color: var(--color-brand-card);
+    border: 1px solid var(--color-brand-border);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    transition: all 0.3s;
+  }
+  .card:hover {
+    border-color: color-mix(in srgb, var(--color-brand-accent) 30%, transparent);
+  }
+
+  .glass {
+    background-color: color-mix(in srgb, var(--color-brand-card) 80%, transparent);
+    backdrop-filter: blur(24px);
+    border-bottom: 1px solid color-mix(in srgb, var(--color-brand-border) 50%, transparent);
+  }
+
+  .gradient-text {
+    background: linear-gradient(to right, var(--color-brand-accent), var(--color-brand-accent2));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glow {
+    box-shadow: 0 0 60px -20px color-mix(in srgb, var(--color-brand-accent) 30%, transparent);
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #0A0E17; }
+::-webkit-scrollbar-thumb { background: #334155; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #475569; }
+
+/* Grid bg */
+.grid-bg {
+  background-image: 
+    linear-gradient(color-mix(in srgb, var(--color-brand-accent) 3%, transparent) 1px, transparent 1px),
+    linear-gradient(90deg, color-mix(in srgb, var(--color-brand-accent) 3%, transparent) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
