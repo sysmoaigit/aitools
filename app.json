@@ -1,25 +1,32 @@
 {
   "expo": {
-    "name": "aitools",
-    "slug": "aitools",
+    "name": "AI Premium Tools",
+    "slug": "ai-premium-tools",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
-    "userInterfaceStyle": "light",
+    "userInterfaceStyle": "dark",
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.sysmoai.aipremiumtools"
     },
     "android": {
       "adaptiveIcon": {
-        "backgroundColor": "#E6F4FE",
+        "backgroundColor": "#0F172A",
         "foregroundImage": "./assets/android-icon-foreground.png",
         "backgroundImage": "./assets/android-icon-background.png",
         "monochromeImage": "./assets/android-icon-monochrome.png"
       },
+      "package": "com.sysmoai.aipremiumtools",
       "predictiveBackGestureEnabled": false
     },
     "web": {
-      "favicon": "./assets/favicon.png"
+      "favicon": "./assets/favicon.png",
+      "name": "AI Premium Tools",
+      "shortName": "AI Premium",
+      "description": "Discover the best AI tools — curated directory of 200+ AI tools across 9 categories with ratings, comparisons, and affiliate savings.",
+      "themeColor": "#0F172A",
+      "backgroundColor": "#0F172A"
     },
     "plugins": [
       "react-native-google-mobile-ads"

@@ -23,7 +23,7 @@ const screenOptions = {
 function HomeStackScreen() {
   return (
     <HomeStack.Navigator screenOptions={screenOptions}>
-      <HomeStack.Screen name="HomeMain" component={HomeScreen} options={{ title: 'SYSmoAI Tools' }} />
+      <HomeStack.Screen name="HomeMain" component={HomeScreen} options={{ title: 'AI Premium Tools' }} />
       <HomeStack.Screen name="ToolDetail" component={ToolDetailScreen} />
     </HomeStack.Navigator>
   );
